@@ -1,4 +1,4 @@
 FROM maven:alpine
 COPY . ./
-RUN mvn clean package
+RUN mvn package
 COPY dist /providers
