@@ -5,4 +5,5 @@ RUN mkdir -p /root/.m2 \
 COPY settings.xml /root/.m2
 COPY . ./
 RUN mvn clean package
-COPY dist /providers
+RUN mkdir -p /providers
+RUN cp ./dist/* /providers
