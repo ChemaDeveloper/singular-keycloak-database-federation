@@ -4,5 +4,5 @@ RUN mkdir -p /root/.m2 \
 # Copy maven settings, containing repository configurations
 COPY settings.xml /root/.m2
 COPY . ./
-RUN mvn package
+RUN mvn clean package
 COPY dist /providers
